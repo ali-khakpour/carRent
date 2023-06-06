@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GrFormDown } from "react-icons/gr";
-import { TbArrowsTransferDown } from "react-icons/tb";
+import { BsArrowLeftRight} from "react-icons/bs";
+import { useLocation } from "react-router-dom";
 
 const PickAndDrop = () => {
   const [value, setValue] = useState({
@@ -12,6 +13,8 @@ const PickAndDrop = () => {
     dropTime: "10:55",
   });
 
+  const {pathname} = useLocation()
+
   console.log(value);
 
   const changeHandler = (e) => {
@@ -21,8 +24,8 @@ const PickAndDrop = () => {
   };
 
   return (
-    <div className="w-full flex flex-col  md:flex-row  md:justify-around items-center -translate-y-24 md:translate-y-0 md:mt-9 ">
-      <div className="w-full md:w-[40%] h-[128px] bg-[#ffff] rounded-md  px-4 py-[18px]">
+    <div className={pathname === '/category' ? "w-full flex flex-col  lg:flex-row  lg:justify-between items-center md:mt-9 md:gap-x-6 " : "w-full flex flex-col  md:flex-row  md:justify-between items-center -translate-y-24 md:translate-y-0 md:mt-9 md:gap-x-6 "}>
+      <div className=" w-full lg:w-[50%] h-[128px] bg-[#ffff] rounded-md  px-4 py-[18px]">
         {/* title pick up */}
         <div className="flex items-center gap-x-2">
           <div className="w-4 h-4 rounded-full bg-information flex justify-center items-center">
@@ -76,11 +79,11 @@ const PickAndDrop = () => {
       </div>
 
       {/* change data  */}
-      <div className="w-16 h-16 rounded-md bg-primary  z-10 text-[#ffffff] text-[32px] flex justify-center items-center ">
-        <TbArrowsTransferDown />
+      <div className=" w-16 h-16 rounded-md bg-primary  z-10 text-[#ffffff] text-[26px] flex justify-center items-center rotate-90 ">
+        <BsArrowLeftRight />
       </div>
 
-      <div className="w-full md:w-[40%] h-[128px] bg-[#ffff] rounded-md  px-4 py-[18px] ">
+      <div className=" w-full lg:w-[50%] h-[128px] bg-[#ffff] rounded-md  px-4 py-[18px] ">
         {/* title Drop off */}
         <div className="flex items-center gap-x-2">
           <div className="w-4 h-4 rounded-full bg-information flex justify-center items-center">

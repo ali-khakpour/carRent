@@ -1,4 +1,5 @@
 import Header from "../components/templet/Header";
+import Footer from "../components/templet/footer";
 
 
 const Layout = ({children}) => {
@@ -6,6 +7,7 @@ const Layout = ({children}) => {
         <div>
             <Header />
             {children}
+            <Footer />
         </div>
      );
 }

@@ -1,11 +1,14 @@
-import Circels from "../elements/circels";
-import ferrari from "../../data/images/ferrari.png";
-import RentButton from "../elements/rentButton";
-
-const rentValue = "Rental Car";
-const BanerSite = () => {
+const A = () => {
   return (
-    <div className="w-full flex justify-between gap-x-10 md:-mt-7 ">
+    <div>
+      <div className="w-full  h-[232px] md:h-[360px] bg-information translate-y-[-155px] md:translate-y-0 rounded-md overflow-hidden relative p-3 text-[#ffff]">
+        <img src={ferrari} alt="" w-full h-full />
+      </div>
+      <div className="w-full  h-[232px] md:h-[360px] bg-information translate-y-[-155px] md:translate-y-0 rounded-md overflow-hidden relative p-3 text-[#ffff]">
+
+        <img src={ferrari} alt="" w-full />
+      </div>
+
       <div className="w-full flex justify-between gap-x-10 ">
         <div className="w-full  h-[232px] md:h-[360px] bg-information translate-y-[-155px] md:translate-y-0 rounded-md overflow-hidden relative p-3 text-[#ffff]">
           <p className="text-[18px] font-[600]">
@@ -47,4 +50,4 @@ const BanerSite = () => {
   );
 };
 
-export default BanerSite;
+export default A;

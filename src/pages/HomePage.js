@@ -2,7 +2,7 @@ import Home from "../components/templet/home";
 
 const HomePage = () => {
     return ( 
-        <div>
+        <div className="2xl:flex justify-center items-center w-full">
            <Home />
         </div>
      );
